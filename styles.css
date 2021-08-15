@@ -27,3 +27,11 @@ body {
   background-position: 50% 100%;
   background-size: 100% 50%;
 }
+
+.cardbg {
+  background-color: var(--dark-blue);
+}
+
+.mBox {
+  margin-top: 22rem;
+}
