@@ -1,37 +1,118 @@
-/* Style guide variables */
-:root {
-  /* LAYOUT */
-  --mobile-size: 375px;
-  --desktop-size: 1440px;
-  /* COLORS */
-  /* Primary */
-  --primary-color: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
-  /* Neutral */
-  --pale-blue: hsl(243, 100%, 93%);
-  --grayish-blue: hsl(229, 7%, 55%);
-  --dark-blue: hsl(228, 56%, 26%);
-  --very-dark-blue: hsl(229, 57%, 11%);
-}
-
 html {
-  font-family: "Raleway", sans-serif;
   height: 100vh;
   width: 100vw;
 }
 
 body {
   font-size: 14px;
-  background-color: var(--very-dark-blue);
+  font-family: "Raleway", sans-serif;
+  background-color: #0c122c;
   background-image: url("images/bg-desktop.png");
   background-repeat: no-repeat;
   background-position: 50% 100%;
   background-size: 100% 50%;
+  color: #fff;
 }
 
-.cardbg {
-  background-color: var(--dark-blue);
+p {
+  font-weight: 400;
 }
 
-.mBox {
-  margin-top: 22rem;
+.strong {
+  font-weight: 700;
 }
+
+.card-bg {
+  background-color: #1d2c67;
+  height: 200px;
+  border-radius: 5% 30% 5% 5%;
+}
+
+.meter {
+  height: 25px;
+  position: relative;
+  background: #0c122c;
+  border-radius: 25px;
+  padding: 4px;
+}
+.meter .bar {
+  display: block;
+  height: 100%;
+  border-radius: 8px;
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  position: relative;
+  overflow: hidden;
+}
+.meter .circle {
+  position: absolute;
+  left: 96.9%;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.icon-row {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.imagecon {
+  margin-top: 40px;
+  margin-left: 35px;
+}
+
+.container-box {
+  margin-top: 320px;
+  margin-left: 250px;
+}
+
+#iconbg {
+  background-color: #0c122c;
+  margin: 0 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10%;
+}
+
+.progress-bg {
+  background-color: #1d2c67;
+  height: 150px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 48.9px;
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+
+.text-bg {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.num {
+  color: #0c122c;
+  font-weight: 700;
+}
+
+.full-text {
+  color: #848794;
+  font-weight: 700;
+}
+
+.prog-box {
+  margin-bottom: 200px;
+}
+
+/*# sourceMappingURL=styles.css.map */

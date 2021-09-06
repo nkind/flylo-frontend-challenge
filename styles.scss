@@ -1,0 +1,135 @@
+// Font
+$font-stack: "Raleway", sans-serif;
+$font-light: 400;
+$font-heavy: 700;
+// Layout
+$mobile-size: 375px;
+$desktop-size: 1440px;
+// Colors
+$primary-gradient-one: hsl(6, 100%, 80%);
+$primary-gradient-two: hsl(335, 100%, 65%);
+$pale-blue: hsl(243, 100%, 93%);
+$grayish-blue: hsl(229, 7%, 55%);
+$dark-blue: hsl(228, 56%, 26%);
+$darker-blue: hsl(229, 57%, 11%);
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  font-size: 14px;
+  font-family: $font-stack;
+  background-color: $darker-blue;
+  background-image: url("images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 100% 50%;
+  color: #fff;
+}
+
+p {
+  font-weight: $font-light;
+}
+
+.strong {
+  font-weight: $font-heavy;
+}
+
+.card-bg {
+  background-color: $dark-blue;
+  height: 200px;
+  border-radius: 5% 30% 5% 5%;
+}
+
+.meter {
+  height: 25px;
+  position: relative;
+  background: $darker-blue;
+  border-radius: 25px;
+  padding: 4px;
+  .bar {
+    display: block;
+    height: 100%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      to right,
+      $primary-gradient-one,
+      $primary-gradient-two
+    );
+    position: relative;
+    overflow: hidden;
+  }
+  .circle {
+    position: absolute;
+    left: 96.9%;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+  }
+}
+
+.icon-row {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.imagecon {
+  margin-top: 40px;
+  margin-left: 35px;
+}
+
+.container-box {
+  margin-top: 320px;
+  margin-left: 250px;
+}
+
+#iconbg {
+  background-color: $darker-blue;
+  margin: 0 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10%;
+}
+
+.progress-bg {
+  background-color: $dark-blue;
+  height: 150px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 48.9px;
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.text {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+}
+
+.text-bg {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.num {
+  color: $darker-blue;
+  font-weight: $font-heavy;
+}
+
+.full-text {
+  color: $grayish-blue;
+  font-weight: $font-heavy;
+}
+
+.prog-box {
+  margin-bottom: 200px;
+}
