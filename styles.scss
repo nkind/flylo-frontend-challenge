@@ -41,6 +41,7 @@ p {
   background-color: $dark-blue;
   height: 200px;
   border-radius: 5% 30% 5% 5%;
+  margin-top: 27px;
 }
 
 .meter {
@@ -99,7 +100,7 @@ p {
   height: 150px;
   border-radius: 10px;
   padding: 20px;
-  margin-top: 48.9px;
+  z-index: -1;
 }
 
 .subtitle {
@@ -117,7 +118,22 @@ p {
 .text-bg {
   background-color: white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 0.5em;
+}
+
+.text-bg::after {
+  content: "";
+  position: absolute;
+  bottom: 56%;
+  right: 20.95%;
+  width: 0;
+  height: 0;
+  border: 45px solid transparent;
+  border-top-color: white;
+  border-bottom: 0;
+  border-right: 0;
+  margin-left: -10px;
+  margin-bottom: -20px;
 }
 
 .num {
