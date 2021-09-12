@@ -16,7 +16,6 @@ $darker-blue: hsl(229, 57%, 11%);
 html {
   height: 100vh;
   overflow: hidden;
-  max-width: $desktop-size;
 }
 
 body {
@@ -157,6 +156,18 @@ p {
 
 .mobile-text {
   @media screen and (min-width: $mobile-size) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $desktop-size + 10px) {
+  .text-bg::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $desktop-size - 10px) {
+  .text-bg::after {
     display: none;
   }
 }

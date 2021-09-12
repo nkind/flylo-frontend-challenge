@@ -1,7 +1,6 @@
 html {
   height: 100vh;
   overflow: hidden;
-  max-width: 1440px;
 }
 
 body {
@@ -142,6 +141,16 @@ p {
   }
 }
 
+@media screen and (min-width: 1450px) {
+  .text-bg::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 1430px) {
+  .text-bg::after {
+    display: none;
+  }
+}
 @media screen and (max-width: 375px) {
   html {
     max-width: 375px;
