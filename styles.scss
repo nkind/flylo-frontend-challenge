@@ -15,61 +15,52 @@ $darker-blue: hsl(229, 57%, 11%);
 
 html {
   height: 100vh;
-  width: 100vw;
+  overflow: hidden;
+  max-width: $desktop-size;
 }
 
 body {
-  font-size: 14px;
-  font-family: $font-stack;
   background-color: $darker-blue;
   background-image: url("images/bg-desktop.png");
-  background-repeat: no-repeat;
   background-position: 50% 100%;
+  background-repeat: no-repeat;
   background-size: 100% 50%;
   color: #fff;
+  font-family: $font-stack;
+  font-size: 14px;
 }
 
 p {
   font-weight: $font-light;
 }
 
-.strong {
-  font-weight: $font-heavy;
+#nowrap {
+  flex-wrap: nowrap;
+}
+
+#iconbg {
+  background-color: $darker-blue;
+  border-radius: 10%;
+  margin: 0 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.container-box {
+  margin-left: 280px;
+  margin-top: 280px;
 }
 
 .card-bg {
   background-color: $dark-blue;
-  height: 200px;
   border-radius: 5% 30% 5% 5%;
+  height: 200px;
   margin-top: 27px;
 }
 
-.meter {
-  height: 25px;
-  position: relative;
-  background: $darker-blue;
-  border-radius: 25px;
-  padding: 4px;
-  .bar {
-    display: block;
-    height: 100%;
-    border-radius: 8px;
-    background-image: linear-gradient(
-      to right,
-      $primary-gradient-one,
-      $primary-gradient-two
-    );
-    position: relative;
-    overflow: hidden;
-  }
-  .circle {
-    position: absolute;
-    left: 96.9%;
-    height: 20px;
-    width: 20px;
-    background-color: white;
-    border-radius: 50%;
-  }
+.imagecon {
+  margin-left: 35px;
+  margin-top: 40px;
 }
 
 .icon-row {
@@ -77,36 +68,8 @@ p {
   margin-top: 30px;
 }
 
-.imagecon {
-  margin-top: 40px;
-  margin-left: 35px;
-}
-
-.container-box {
-  margin-top: 320px;
-  margin-left: 250px;
-}
-
-#iconbg {
-  background-color: $darker-blue;
-  margin: 0 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-radius: 10%;
-}
-
-.progress-bg {
-  background-color: $dark-blue;
-  height: 150px;
-  border-radius: 10px;
-  padding: 20px;
-  z-index: -1;
-}
-
-.subtitle {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.prog-box {
+  margin-bottom: 200px;
 }
 
 .text {
@@ -117,28 +80,23 @@ p {
 
 .text-bg {
   background-color: white;
-  padding: 10px;
   border-radius: 0.5em;
+  padding: 10px;
 }
 
 .text-bg::after {
-  content: "";
-  position: absolute;
-  bottom: 56%;
-  right: 20.95%;
-  width: 0;
-  height: 0;
   border: 45px solid transparent;
-  border-top-color: white;
   border-bottom: 0;
   border-right: 0;
-  margin-left: -10px;
+  border-top-color: white;
+  bottom: 53.2%;
+  content: "";
+  height: 0;
   margin-bottom: -20px;
-}
-
-.num {
-  color: $darker-blue;
-  font-weight: $font-heavy;
+  margin-left: -10px;
+  position: absolute;
+  right: 22.1%;
+  width: 0;
 }
 
 .full-text {
@@ -146,6 +104,103 @@ p {
   font-weight: $font-heavy;
 }
 
-.prog-box {
-  margin-bottom: 200px;
+.num {
+  color: $darker-blue;
+  font-weight: $font-heavy;
+}
+
+.progress-bg {
+  background-color: $dark-blue;
+  border-radius: 10px;
+  height: 150px;
+  padding: 20px;
+  z-index: -1;
+}
+
+.strong {
+  font-weight: $font-heavy;
+}
+
+.meter {
+  background: $darker-blue;
+  border-radius: 25px;
+  height: 25px;
+  padding: 4px;
+  position: relative;
+  .bar {
+    background-image: linear-gradient(
+      to right,
+      $primary-gradient-one,
+      $primary-gradient-two
+    );
+    border-radius: 8px;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .circle {
+    background-color: white;
+    border-radius: 50%;
+    height: 20px;
+    left: 95%;
+    position: absolute;
+    width: 20px;
+  }
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mobile-text {
+  @media screen and (min-width: $mobile-size) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $mobile-size) {
+  html {
+    max-width: $mobile-size;
+  }
+
+  body {
+    background-position: center;
+    background-size: cover;
+  }
+
+  #nowrap {
+    flex-wrap: wrap;
+  }
+
+  .container-box {
+    margin-left: 0;
+    margin-top: 100px;
+  }
+
+  .meter {
+    .circle {
+      left: 91%;
+    }
+  }
+
+  .text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 95px;
+  }
+
+  .mobile-text-bg {
+    background-color: white;
+    position: absolute;
+    bottom: 15%;
+    padding: 10px;
+    border-radius: 0.5em;
+  }
 }
